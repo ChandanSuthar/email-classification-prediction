@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Classification System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <div class="card1">
+                <h2>Email Classification System</h2>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="card">
+            <form action="{{ url_for('get_result') }}" method="post" id="classificationForm">
+                <h3><label for="emailContent">Enter Email Content:</label></h3>
+                <textarea id="emailContent" name="emailContent" required></textarea>
+                <button type="submit" class="button">Classify Email</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="resultTitle"></h2>
+        </div>
+    </div>
